@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<!-- The first line of code specifies the URL for our test environment. -->  
+<form action="https://secure-test.worldpay.com/wcc/purchase" method=POST>  
+
+    <!-- This next line contains the testMode parameter - it specifies that the submission is a test submission -->  
+    <input type="hidden" name="testMode" value="100">  
+    
+    <!-- This next line contains a mandatory parameter. Put your Installation ID inside the quotes after value= -->  
+    <input type="hidden" name="instId" value="T_S_6ac0503e-8115-4e84-abb7-083b91052249">  
+    
+    <!-- Another mandatory parameter. Put your own reference identifier for the item purchased inside the quotes after value= -->  
+    <input type="hidden" name="cartId" value="hinal1012">  
+    
+    <!-- Another mandatory parameter. Put the total cost of the item inside the quotes after value= -->  
+    <input type="hidden" name="amount" value="20">  
+    
+    <!-- Another mandatory parameter. Put the code for the purchase currency inside the quotes after value= -->  
+    <input type="hidden" name="currency" value="USD">  
+    
+    <!-- This creates the button. When it is selected in the browser, the form submits the purchase details to us. -->  
+    <input type=submit value=" Buy This ">  
+    
+    </form>
+    
+</body>
+</html>

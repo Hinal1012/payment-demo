@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-xs-12">
+
+        <div class="col-xs-12 text-center">
+            <div class="header-text">
+                <h3>Take a trip to New York</h3>
+                <h5>Choose from one of our Packages</h5>
+                <hr width="80%">
+            </div>
+        </div>
+
+        {% if message %}
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $('#worldpayResponseModal')
+                            .modal('show')
+                            .find('#message-text')
+                            .text('{{ message }}');
+                });
+
+            </script>
+        {% endif %}
+
+        <!-- Products -->
+        <div class="col-xs-12 products-container">
+
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4">
+                <div class="product-container">
+                    <div class="product-description text-center">
+                        <div class="price-holder">
+                            <h3>$400.00</h3>
+                            <small>Recommended amounts*</small>
+                        </div>
+                        <h4>4 Star Hotel</h4>
+                        <hr width="40%">
+                        <h4>3 Nights Stay</h4>
+                    </div>
+                    <div class="product-footer">
+                        <button class="btn btn-lg btn-primary btn-block" data-toggle="modal"
+                                data-target="#worldpayFormModal">Purchase Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4">
+                <div class="product-container">
+                    <div class="product-description text-center">
+                        <div class="price-holder">
+                            <h3>$600.00</h3>
+                            <small>Recommended amounts*</small>
+                        </div>
+                        <h4>4 Star Hotel</h4>
+                        <hr width="40%">
+                        <h4>3 Nights Stay</h4>
+                        <hr width="40%">
+                        <h4>Flights Included</h4>
+                    </div>
+                    <div class="product-footer">
+                        <button class="btn btn-lg btn-primary btn-block" data-toggle="modal"
+                                data-target="#worldpayFormModal">Purchase Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-4">
+                <div class="product-container">
+                    <div class="product-description text-center">
+                        <div class="price-holder">
+                            <h3>$700.00</h3>
+                            <small>Recommended amounts*</small>
+                        </div>
+                        <h4>4 Star Hotel</h4>
+                        <hr width="40%">
+                        <h4>3 Nights Stay</h4>
+                        <hr width="40%">
+                        <h4>Flights Included</h4>
+                        <hr width="40%">
+                        <h4>Dinner Included</h4>
+                    </div>
+                    <div class="product-footer">
+                        <button class="btn btn-lg btn-primary btn-block" data-toggle="modal"
+                                data-target="#worldpayFormModal">Purchase Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        {% include 'worldpay_form_modal.html' %}
+        {% include 'worldpay_response_modal.html' %}
+
+    </div>
+{% endblock %}
