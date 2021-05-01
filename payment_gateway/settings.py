@@ -132,5 +132,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
 
-WORLDPAY_SERVICE_KEY = config('WORLDPAY_SERVICE_KEY') #you can use this for testing <T_S_5a3769d2-1139-4d15-b6ed-339a91df1059>
+WORLDPAY_SERVICE_KEY = 'T_S_5a3769d2-1139-4d15-b6ed-339a91df1059'
 WORLDPAY_ORDERS_URL = 'https://api.worldpay.com/v1/orders' 

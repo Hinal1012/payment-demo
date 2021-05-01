@@ -5,7 +5,7 @@ from http import HTTPStatus
 
 class Worldpay:
 
-    WORLDPAY_SERVICE_KEY = 'T_S_5a3769d2-1139-4d15-b6ed-339a91df1059'
+    WORLDPAY_SERVICE_KEY = None
     WORLDPAY_ORDERS_URL = 'https://api.worldpay.com/v1/orders/'
 
     @classmethod
